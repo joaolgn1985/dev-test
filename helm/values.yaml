@@ -1,0 +1,8 @@
+environment> development
+container>
+  name: joaolobo-dev
+  namespace: joaolobo
+  port: 8888
+  image: joaolgn/joaolobo
+  tag: latest
+replicas: 2

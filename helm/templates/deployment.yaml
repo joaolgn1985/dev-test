@@ -1,22 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
-namespace: joaolobo
+namespace: {{ .Values.container.namespace }}
 metadata:
-  name: joaolobo-dev
+  name: {{ .Values.container.name }}--{{ .Values.environment }}
   labels:
-    app: joaolobo-dev
+    app: {{ .Values.container.name }}
 spec:
-  replicas: 3
+  replicas: {{ .Values.container.name }}
   selector:
     matchLabels:
-      app: joaolobo-dev
+      app: {{ .Values.container.name }}
   template:
     metadata:
       labels:
-        app: joaolobo-dev
+        app: {{ .Values.container.name }}
     spec:
       containers:
-        - name: joaolobo-dev
-          image: joaolgn/joaolobo
+        - name: {{ .Values.container.name }}
+          image: {{ .Values.container.image }}:{{ .Values.container.tag }}
           ports:
-          -  containerPort: 8888
+          -  containerPort: {{ .Values.container.port }}
+          env:
+            - name: ENVIRONMENT
+              value: {{ .Values.environment }}

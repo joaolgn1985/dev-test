@@ -1,15 +1,15 @@
 apiVersion: v1
 kind: Service
-namespace: joaolobo
+namespace: {{ .Values.container.namespace }}
 metadata:
-  name: joaolobo-dev
+  name: {{ .Values.container.name }}-service-{{ .Values.container.environment }}
   labels:
-    app: joaolobo-dev
+    app: {{ .Values.container.name }}
 spec:
   ports:
-  - port: 8888
+  - port: {{ .Values.container.port }}
     protocol: TCP
-    targetPort: 8888
+    targetPort: {{ .Values.container.port }}
   selector:
-    app: joaolobo-dev
+    app: {{ .Values.container.name }}
   type: ClusterIP

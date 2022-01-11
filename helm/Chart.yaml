@@ -1,5 +1,6 @@
 apiVersion: v2
 name: joaolobo-dev
 description: A library chart with common helper functions userful for the joaolobo-dev application charts.
-type: library
-version: 0.0.0
+sources:
+  - https://github.com/joaolgn1985/dev-test
+version: 1.0.1
