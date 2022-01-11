@@ -1,8 +1,8 @@
 apiVersion: v1
 kind: Service
-namespace: {{ .Values.container.namespace }}
 metadata:
   name: {{ .Values.container.name }}-service-{{ .Values.container.environment }}
+  namespace: {{ .Values.container.namespace }}{{ .Values.environment }}
   labels:
     app: {{ .Values.container.name }}
 spec:

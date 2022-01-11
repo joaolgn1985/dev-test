@@ -1,5 +1,5 @@
-environment> development
-container>
+environment: development
+container:
   name: joaolobo-dev
   namespace: joaolobo
   port: 8888

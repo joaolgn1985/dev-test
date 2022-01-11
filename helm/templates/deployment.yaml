@@ -1,12 +1,12 @@
 apiVersion: apps/v1
 kind: Deployment
-namespace: {{ .Values.container.namespace }}
 metadata:
   name: {{ .Values.container.name }}--{{ .Values.environment }}
+  namespace: {{ .Values.container.namespace }}{{ .Values.environment }}
   labels:
     app: {{ .Values.container.name }}
 spec:
-  replicas: {{ .Values.container.name }}
+  replicas: {{ .Values.container.replicas }}
   selector:
     matchLabels:
       app: {{ .Values.container.name }}
