@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: joaolobo-dev
+  labels:
+    app: joaolobo-dev
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: joaolobo-dev
+  template:
+    metadata:
+      labels:
+        app: joaolobo-dev
+    spec:
+      containers:
+        - name: joaolobo-dev
+          image: joaolgn/joaolobo
+          ports:
+          -  containerPort: 8888
