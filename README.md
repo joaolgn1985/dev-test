@@ -1,7 +1,7 @@
 # Learning DevOps
 
 ## This example have some example above: 
-- [namespace](./namespace//README.md)
-- [deployment](./deployment//README.md)
-- [services](./services//README.md)
-- [helm](./helm/README.md)
+- [namespace](./kubernetes/namespace/README.md)
+- [deployment](./kubernetes/deployment/README.md)
+- [services](./kubernetes/services/README.md)
+- [helm](./kubernetes/helm/README.md)

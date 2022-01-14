@@ -77,3 +77,7 @@
 
   4. Annotations
     Specific owner
+  
+  5. Diff
+
+    kubectl diff -f deployment.yaml
